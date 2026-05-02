@@ -1,0 +1,215 @@
+.contact {
+  padding: var(--section-padding);
+  background: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 0% 100%, rgba(107, 29, 46, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 100% 0%, rgba(201, 168, 76, 0.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.contact__header {
+  text-align: center;
+  margin-bottom: 64px;
+  position: relative;
+}
+
+.contact__title {
+  color: var(--charcoal);
+}
+
+.contact__layout {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* Info panel */
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.contact-info__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contact-info__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(107, 29, 46, 0.08), rgba(201, 168, 76, 0.1));
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: var(--burgundy);
+  flex-shrink: 0;
+}
+
+.contact-info__icon--whatsapp {
+  color: var(--burgundy);
+}
+
+.contact-info__icon--star {
+  color: var(--burgundy);
+}
+
+.contact-info__label {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 5px;
+}
+
+.contact-info__text {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-medium);
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+.contact-info__link {
+  color: var(--burgundy);
+  font-weight: 500;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.contact-info__link:hover {
+  color: var(--gold-dark);
+}
+
+/* CTA Buttons */
+.contact__cta-buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.contact__cta-btn {
+  flex: 1;
+  min-width: 130px;
+  text-align: center;
+  justify-content: center;
+  padding: 13px 20px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+/* Map panel */
+.contact__map-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+}
+
+.contact__map-label {
+  background: linear-gradient(135deg, var(--burgundy), #8B2235);
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact__map-label svg {
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.contact__map-frame {
+  width: 100%;
+  height: 380px;
+  background: #f5f0ea;
+}
+
+.contact__map-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.contact__directions-link {
+  background: var(--white);
+  color: var(--burgundy);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 13px 20px;
+  text-align: center;
+  text-decoration: none;
+  border-top: 1px solid rgba(201, 168, 76, 0.15);
+  transition: background 0.3s ease, color 0.3s ease;
+  letter-spacing: 0.02em;
+}
+
+.contact__directions-link:hover {
+  background: linear-gradient(135deg, rgba(107, 29, 46, 0.06), rgba(201, 168, 76, 0.08));
+  color: var(--gold-dark);
+}
+
+@media (max-width: 1024px) {
+  .contact__layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .contact__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .contact__cta-buttons {
+    grid-column: 1 / -1;
+  }
+
+  .contact__map-frame {
+    height: 320px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact__info {
+    grid-template-columns: 1fr;
+  }
+
+  .contact__cta-buttons {
+    flex-direction: row;
+  }
+
+  .contact__map-frame {
+    height: 280px;
+  }
+}
