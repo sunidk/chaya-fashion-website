@@ -59,9 +59,14 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="contact-info__label">Call Us</h4>
-                <a href="tel:+919481267850" className="contact-info__text contact-info__link">
-                  +91 94812 67850
-                </a>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                  <a href="tel:+919481267850" className="contact-info__text contact-info__link">
+                    +91 94812 67850
+                  </a>
+                  <a href="tel:+918453335708" className="contact-info__text contact-info__link">
+                    +91 84533 35708
+                  </a>
+                </div>
               </div>
             </div>
 

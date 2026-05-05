@@ -1,55 +1,27 @@
 import { useEffect, useRef, useState } from 'react';
+import work1 from '../assets/work1.jpg';
+import work2 from '../assets/work2.jpg';
+import work3 from '../assets/work3.jpg';
+import work4 from '../assets/work4.jpg';
+import work5 from '../assets/work5.jpg';
+import work6 from '../assets/work6.jpg';
+import work7 from '../assets/work7.jpg';
+import work8 from '../assets/work8.jpg';
+import work9 from '../assets/work9.jpg';
+import work10 from '../assets/work10.jpg';
 import './Gallery.css';
 
 const galleryItems = [
-  {
-    category: 'Bridal Lehenga',
-    gradient: 'linear-gradient(135deg, #6B1D2E 0%, #B76E79 50%, #C9A84C 100%)',
-    size: 'tall',
-    pattern: '❋',
-  },
-  {
-    category: 'Silk Blouse',
-    gradient: 'linear-gradient(135deg, #C9A84C 0%, #FAF6F0 50%, #B76E79 100%)',
-    size: 'normal',
-    pattern: '✦',
-  },
-  {
-    category: 'Anarkali Suit',
-    gradient: 'linear-gradient(135deg, #1A1A2E 0%, #6B1D2E 100%)',
-    size: 'normal',
-    pattern: '✿',
-  },
-  {
-    category: 'Designer Saree',
-    gradient: 'linear-gradient(135deg, #8B2D42 0%, #C9A84C 60%, #FAF6F0 100%)',
-    size: 'wide',
-    pattern: '❋',
-  },
-  {
-    category: 'Palazzo Set',
-    gradient: 'linear-gradient(135deg, #B76E79 0%, #1A1A2E 100%)',
-    size: 'normal',
-    pattern: '✦',
-  },
-  {
-    category: 'Party Wear Gown',
-    gradient: 'linear-gradient(135deg, #4A1020 0%, #C9A84C 50%, #B76E79 100%)',
-    size: 'tall',
-    pattern: '✿',
-  },
-  {
-    category: 'Embroidered Kurti',
-    gradient: 'linear-gradient(135deg, #C9A84C 0%, #6B1D2E 100%)',
-    size: 'normal',
-    pattern: '❋',
-  },
-  {
-    category: 'Indo-Western',
-    gradient: 'linear-gradient(135deg, #1A1A2E 0%, #B76E79 50%, #C9A84C 100%)',
-    size: 'normal',
-    pattern: '✦',
-  },
+  { img: work1,  label: 'V-Neck Embroidery Blouse' },
+  { img: work2,  label: 'Back Neck Design Blouse' },
+  { img: work3,  label: 'Scallop Neck Embroidery Blouse' },
+  { img: work4,  label: 'Boat Neck Blouse' },
+  { img: work5,  label: 'Heavy Embroidery Blouse' },
+  { img: work6,  label: 'Prince Cut Blouse' },
+  { img: work7,  label: 'Round Neck Embroidery Blouse' },
+  { img: work8,  label: 'Back Hole Neck Blouse' },
+  { img: work9,  label: 'Saree Kuch Work' },
+  { img: work10, label: 'Saree Falls Work' },
 ];
 
 export default function Gallery() {
@@ -80,7 +52,7 @@ export default function Gallery() {
           <h2 className="section-title">A Glimpse of Our Craft</h2>
           <div className="gold-divider centered"></div>
           <p className="section-subtitle" style={{ textAlign: 'center', margin: '0 auto' }}>
-            Each piece is a conversation between fabric and vision — hover to explore.
+            Real work, real quality — every piece stitched with care and precision.
           </p>
         </div>
 
@@ -88,29 +60,15 @@ export default function Gallery() {
           {galleryItems.map((item, i) => (
             <div
               key={i}
-              className={`gallery-item gallery-item--${item.size}`}
+              className="gallery-item"
               onMouseEnter={() => setHoveredIndex(i)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <div
-                className="gallery-item__bg"
-                style={{ background: item.gradient }}
-              >
-                <span className="gallery-item__pattern" aria-hidden="true">
-                  {item.pattern}
-                </span>
-                <span
-                  className="gallery-item__pattern gallery-item__pattern--2"
-                  aria-hidden="true"
-                >
-                  {item.pattern}
-                </span>
-              </div>
+              <img src={item.img} alt={item.label} className="gallery-item__img" />
               <div className={`gallery-item__overlay${hoveredIndex === i ? ' gallery-item__overlay--show' : ''}`}>
                 <div className="gallery-item__overlay-content">
                   <span className="gallery-item__overlay-icon">✦</span>
-                  <span className="gallery-item__category">{item.category}</span>
-                  <span className="gallery-item__view">View Detail</span>
+                  <span className="gallery-item__category">{item.label}</span>
                 </div>
               </div>
             </div>

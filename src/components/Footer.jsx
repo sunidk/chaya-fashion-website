@@ -11,12 +11,14 @@ const quickLinks = [
 ];
 
 const services = [
-  'Custom Blouse Stitching',
-  'Salwar Kameez',
-  'Lehenga & Bridal Wear',
-  'Saree Alterations',
-  'Western Outfits',
-  'Embroidery Work',
+  'Sada Blouse',
+  'Lining Blouse',
+  'Machine Embroidery Blouse',
+  'Prince / Princess Cut Blouse',
+  'Saree Falls & Kuch',
+  'Dress Stitching',
+  'Churidar / Salwar',
+  'Kurti Stitching',
 ];
 
 const socialLinks = [
@@ -114,7 +116,10 @@ export default function Footer() {
             </div>
             <div className="footer__contact-item">
               <FaPhone className="footer__contact-icon" />
-              <a href="tel:+919481267850" className="footer__contact-link">+91 94812 67850</a>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                <a href="tel:+919481267850" className="footer__contact-link">+91 94812 67850</a>
+                <a href="tel:+918453335708" className="footer__contact-link">+91 84533 35708</a>
+              </div>
             </div>
             <div className="footer__contact-item">
               <FaWhatsapp className="footer__contact-icon footer__contact-icon--whatsapp" />
