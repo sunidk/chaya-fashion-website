@@ -115,10 +115,10 @@ export default function Navbar() {
           rel="noopener noreferrer"
           onClick={() => setMenuOpen(false)}
         >
-          Call / WhatsApp Us
+          WhatsApp Us
         </a>
 
-        <p className="mobile-menu__hours">Mon – Sat &nbsp;·&nbsp; 9 AM – 7 PM &nbsp;·&nbsp; Nittur, Udupi</p>
+        <p className="mobile-menu__hours">Mon – Sat &nbsp;·&nbsp; 9 AM – 9 PM &nbsp;·&nbsp; Nittur, Udupi</p>
       </div>
     </header>
   );
