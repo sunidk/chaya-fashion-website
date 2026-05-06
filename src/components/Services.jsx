@@ -123,7 +123,7 @@ export default function Services() {
           <h2 className="section-title">Our Tailoring Services</h2>
           <div className="gold-divider centered"></div>
           <p className="section-subtitle" style={{ textAlign: 'center', margin: '0 auto' }}>
-            From everyday elegance to once-in-a-lifetime bridal moments — each stitch a promise of perfection.
+            From everyday saree blouses to special occasion wear — each stitch a promise of perfection.
           </p>
         </div>
 

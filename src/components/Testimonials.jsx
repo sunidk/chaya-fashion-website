@@ -7,7 +7,7 @@ const testimonials = [
     role: 'Bride, Nittur, Udupi',
     stars: 5,
     quote:
-      'Vijayalaxmi akka stitched my bridal blouse and lehenga — it was perfect for my wedding in Udupi. The fit was so precise, everyone kept asking who my tailor was. I have been recommending Chaya Fashion to every bride I know!',
+      'Vijayalaxmi akka stitched my bridal blouse and saree falls — it was perfect for my wedding in Udupi. The fit was so precise, everyone kept asking who my tailor was. I have been recommending Chaya Fashion to every bride I know!',
     initials: 'SS',
     gradient: 'linear-gradient(135deg, #6B1D2E, #B76E79)',
   },
